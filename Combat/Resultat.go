@@ -1,3 +1,5 @@
+package combat
+
 import "github.com/utrescu/CombatCavallers.Go/lluitador"
 
 // IResultat retorna el resultat del combat

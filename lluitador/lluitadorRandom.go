@@ -5,6 +5,11 @@ type LluitadorRandom struct {
 	nom string
 }
 
+func CreateLluitadorRandom(nomLluitador string) LluitadorRandom {
+	lluitador := LluitadorRandom{nom: nomLluitador}
+	return lluitador
+}
+
 // GetNom retorna el nom del lluitador
 func (ll LluitadorRandom) GetNom() string {
 	return ll.nom
