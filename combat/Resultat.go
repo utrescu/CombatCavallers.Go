@@ -31,11 +31,11 @@ func (r Resultat) GetNom() string {
 }
 
 func (r Resultat) GetVida() int {
-	return r.GetVida()
+	return r.vida
 }
 
 func (r Resultat) EsKo() bool {
-	return r.GetVida() == 0
+	return r.vida == 0
 }
 
 // GetLluitador retorna el lluitador

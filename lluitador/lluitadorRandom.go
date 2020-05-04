@@ -22,7 +22,7 @@ func (ll LluitadorRandom) Protegeix() []LlocOnPicar {
 }
 
 // Pica retorna on pica
-func Pica() LlocOnPicar {
+func (ll LluitadorRandom) Pica() LlocOnPicar {
 	var llocs = CreateLlocsOnPicar()
 	return llocs.GetRandomLloc()
 }

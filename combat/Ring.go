@@ -39,18 +39,19 @@ func (ring *Ring) Lluiteu() ([]Resultat, error) {
 
 		if haRebut {
 			ring.resultat[elQueRep].TreuVida()
-			log.Printf("%s rep un cop al %s de %s", ring.resultat[elQueRep].GetNom(), pica, ring.resultat[elQuePica].GetNom())
+			log.Printf("%s rep un cop %s de %s", ring.resultat[elQueRep].GetNom(), pica, ring.resultat[elQuePica].GetNom())
 		} else {
-			log.Printf("%s atura el cop al %s de %s", ring.resultat[elQueRep].GetNom(), pica, ring.resultat[elQuePica].GetNom())
+			log.Printf("%s atura el cop %s de %s", ring.resultat[elQueRep].GetNom(), pica, ring.resultat[elQuePica].GetNom())
 		}
 
-		log.Printf("{_Lluitadors[0].Nom}-({_Lluitadors[0].Vida}) vs {_Lluitadors[1].Nom}-({_Lluitadors[1].Vida})")
+		log.Printf("%s-(%d) vs %s-(%d)", ring.resultat[0].GetNom(), ring.resultat[0].GetVida(),
+			ring.resultat[1].GetNom(), ring.resultat[1].GetVida())
 		elQuePica = elQueRep
 	}
 
 	guanyador := ring.resultat[1]
 	perdedor := ring.resultat[0]
-	if ring.resultat[0].EsKo() {
+	if ring.resultat[1].EsKo() {
 		guanyador = ring.resultat[0]
 		perdedor = ring.resultat[1]
 	}
