@@ -6,6 +6,7 @@ import (
 	"math/rand"
 
 	"github.com/utrescu/CombatCavallers.Go/lluitador"
+	"github.com/utrescu/CombatCavallers.Go/cops"
 )
 
 // Ring és on es desenvolupen els combats
@@ -67,7 +68,7 @@ func (ring *Ring) Lluiteu() ([]Resultat, error) {
 	return ring.resultat, nil
 }
 
-func contains(s []lluitador.LlocOnPicar, e lluitador.LlocOnPicar) bool {
+func contains(s []cops.LlocOnPicar, e cops.LlocOnPicar) bool {
 	for _, a := range s {
 		if a == e {
 			return true

@@ -12,8 +12,10 @@ func main() {
 
 	rand.Seed(time.Now().UnixNano())
 
-	lluitador1 := lluitador.CreateLluitadorRandom("AixafaMandonguilles")
-	lluitador2 := lluitador.CreateLluitadorRandom("MataCerilles")
+	copsPermesos := combat.CopsPermesos{}
+
+	lluitador1 := lluitador.CreateLluitadorRandom("AixafaMandonguilles", copsPermesos)
+	lluitador2 := lluitador.CreateLluitadorRandom("MataCerilles", copsPermesos)
 
 	ring := combat.Ring{}
 
