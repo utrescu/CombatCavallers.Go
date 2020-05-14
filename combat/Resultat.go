@@ -26,14 +26,17 @@ func CreateResultat(lluitador1 lluitador.ILluitador, vida int) Resultat {
 	return Resultat{lluitador1, vida}
 }
 
+// GetNom retorna el nom del lluitador
 func (r Resultat) GetNom() string {
 	return r.lluitador.GetNom()
 }
 
+// GetVida retorna la vida que li queda al lluitador
 func (r Resultat) GetVida() int {
 	return r.vida
 }
 
+// EsKo informa de si el lluitador ha quedat Ko
 func (r Resultat) EsKo() bool {
 	return r.vida == 0
 }
@@ -43,6 +46,7 @@ func (r Resultat) GetLluitador() lluitador.ILluitador {
 	return r.lluitador
 }
 
+// TreuVida és el mètode per treure vida al lluitador
 func (r *Resultat) TreuVida() int {
 	r.vida--
 	return r.vida
