@@ -16,8 +16,8 @@ func main() {
 	copsPermesos := combat.CopsPermesos{}
 
 	// Crear lluitadors informant-los d'on es pot picar
-	lluitador1 := lluitador.CreateLluitadorRandom("AixafaMandonguilles", copsPermesos)
-	lluitador2 := lluitador.CreateLluitadorRandom("MataCerilles", copsPermesos)
+	lluitador1 := lluitador.CreateLluitadorAleatori("AixafaMandonguilles", copsPermesos)
+	lluitador2 := lluitador.CreateLluitadorAleatori("MataCerilles", copsPermesos)
 
 	// Afegir lluitadors al ring i fer-los lluitar
 	ring := combat.Ring{}
